@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+  padding:0px;
+  margin:0px;
+}
+body{
+  background-color: beige;
+}
+
+.container{
+  height:60px;
+  width:100%;
+  background-color: rgb(209, 15, 193);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  height:40px;
+  cursor: pointer;
+  width:70px;
+  background-color: rgb(51, 3, 95);
+  color:white;
+  margin:4px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition:all 0.8s;
+}
+button:hover{
+  transition:all 0.8s;
+  background-color: rgb(92, 228, 126);
+  color:rgb(4, 4, 104);
+}
+input{
+  height:40px;
+  padding:5px;
+  width:30vw;
+  border:none;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size:20px;
+  
+
+}
+input:focus{
+  box-shadow: 0px 0px 5px white;
+  
+}
+
+.container h1{
+  color:rgb(24, 2, 37);
+  font-size:40px;
+  width:80vh;
+  font-weight: 700;
+  margin-right:70px;
+  
+}
+
+
+.loading_container{
+  height:100px;
+  border:1px solid red;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.loading_container h1{
+  color:blue;
+  border:1px solid red;
+  display: flex;
+  font-size:80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie_notfound{
+  height:100px;
+  border:1px solid red;
+  display:none;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.movie1_notfound{
+  height:100px;
+  border:1px solid red;
+  display:block;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.movie_notfound h1{
+  align-items: center;
+  justify-content:center;
+  display:flex;
+  font-size:50px;
+  width:auto;
+
+}
+.body_container{
+  height:auto;
+  width:50vw;
+  display:flex;
+
+  box-shadow:0px 0px 20px rgb(103, 151, 32);
+  border-radius: 10px;
+}
+.body_container h1{
+
+}
+.img_container{
+  border:none;
+  padding:5px;
+  
+
+}
+.img_container img{
+  height:50vh;
+  width:20vw;
+}
+
+.parent_container{
+  display:flex;
+  height:auto;
+  align-items: center;
+  justify-content: center;
+  margin-top:15px;
+
+}
+
+.data_container{
+  display: flex;
+  flex-wrap: wrap;
+  overflow:hidden;
+  flex-direction: column;
+  width: 100%;
+  padding:5px;
+  background-color: rgb(215, 226, 224);
+}
+.data_container h1{
+  font-size:32px;
+  text-transform: capitalize;
+  color:rgb(110, 6, 196);
+  margin:5px;
+  
+}
+span{
+  color:green;
+  font-size:25px;
+}
+span h1{
+  color:black;
+
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+}
+.heading h1{
+  color:rgb(121, 71, 14);
+  font-size:40px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:80px;
+  width:100%;
+  margin-top:30px;
+  
+}
+.home h1{
+  font-size:80px;
+}
