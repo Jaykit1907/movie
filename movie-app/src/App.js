@@ -21,6 +21,7 @@
       const databody=document.querySelector(".parent_container");
       const loadingbody=document.querySelector(".loading_container");
       const notfoundbody=document.querySelector(".notfound_container")
+      setData(searchinput);
 
       try{
       const response = await fetch(`http://www.omdbapi.com/?apikey=${apikey}&t=${data}`);
