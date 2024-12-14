@@ -5,6 +5,7 @@ const App = () => {
   const [searchinput, setSearchinput] = useState("");
   const [imgdta, setImgdata] = useState("");
   const [actor, setActor] = useState("");
+  const [writer,setWriter]=useState("");
   const [director, setDirector] = useState("");
   const [year, setYear] = useState("");
   const [lan, setLan] = useState("");
@@ -18,6 +19,16 @@ const App = () => {
   const apikey = "cdb94eeb";
 
   const work = async () => {
+
+    if(searchinput===""){
+      setHome(true);
+      setNotfound1(false);
+      alert("please enter movie name");
+   
+    }
+    else{
+
+    
     // Reset states and start loading
     setLoadingcontainer(true);
     setParentcontainer(false);
@@ -27,6 +38,7 @@ const App = () => {
     try {
       const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&t=${searchinput}`);
       const data = await response.json();
+      console.log(data);
       setResponseData(data); // Update response data for useEffect to handle
     } catch (err) {
       setLoadingcontainer(false);
@@ -37,6 +49,7 @@ const App = () => {
 
     }
   };
+}
 
   // Handle side effects of responseData updates
   useEffect(() => {
@@ -56,6 +69,7 @@ const App = () => {
       setDirector(responseData.Director);
       setYear(responseData.Released);
       setLan(responseData.Language);
+      setWriter(responseData.Writer);
 
       setParentcontainer(true);
       setNotfound1(false);
@@ -67,6 +81,7 @@ const App = () => {
 
     setLoadingcontainer(false); // Stop loading in all cases
   }, [responseData]);
+
 
   return (
     <>
@@ -83,7 +98,8 @@ const App = () => {
 
       {loadingcontainer && (
         <section className="loading_container">
-          <h1>Loading...</h1>
+          <div className="loading_container1"></div>
+
         </section>
       )}
 
@@ -99,6 +115,7 @@ const App = () => {
               </div>
               <h1>Actor Name: <span>{actor}</span></h1>
               <h1>Director: <span>{director}</span></h1>
+              <h1>Writer:<span>{writer}</span></h1>
               <h1>Year: <span>{year}</span></h1>
               <h1>Language: <span>{lan}</span></h1>
             </div>
